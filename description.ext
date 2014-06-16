@@ -1,0 +1,100 @@
+/****************************************************************
+L.A.M.B.S. Mission Framework
+LAF3 version: 1.02 / MAY 2014
+
+Script: Mission config
+Author: Whiztler
+Script version: 1.9
+
+Game type: n/a
+File: description.ext
+****************************************************************/
+
+/**********  Mission type settings **********/
+class Header {
+	gameType = Coop; // A3: Coop, DM, TDM, CTF, SC, CTI, RPG, Sandbox, Seize, Defend
+	minPlayers = 1;
+	maxPlayers = 14; // Change to the exact amount of available player slots
+	playerCountMultipleOf = 1; // Coop setting. Set to 0 for other game types
+};
+
+/**********  Respawn & JIP Settings **********/
+respawn = "BIRD"; //  "NONE" = No respawn, "BIRD" = Respawn as a seagull, "INSTANT" - Respawn just where you died, "BASE" - Respawn in base. 
+respawnDelay = 0; // Respawn delay time in seconds (set to 3 for testing, set to 300 for final)
+RespawnDialog = 0; // Respawn dialog in case of multiple locations
+joinUnassigned = 1; // Where 0 forces joining players into the first empty slot, 1 leaves them to select their own slot
+
+/**********  Loading Screen **********/
+author = "Whiztler";
+onLoadName = "Switch Off";
+onLoadMission = "Wolfpack Vol. 1 // Day 3 - Switch Off";
+onLoadIntroTime = false;
+onLoadMissionTime = false;
+loadScreen = "Core\I\intro_day3.paa";
+onLoadIntro = "Remember, use 'G' to access your inventory!";
+
+/**********  End Screen / Debriefing **********/
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "Operation Switch Off";
+		description = "Eagle Eye: Well done men. Vodka and medals await upon your return!";
+		pictureBackground = "Core\I\intro_day3.paa"; // eg. "img\yourpicture.jpg" no picture? use "";
+		picture = "b_HQ"; // Marker icon
+		pictureColor[] = {0.0,0.3,0.6,1}; // Overlay color
+	};
+	class End2
+	{
+		title = "Mission FAILED";
+		subtitle = "Operation Switch Off";
+		description = "Eagle Eye: Your failure will have dire consequences for the remainder of the campaign!";
+		pictureBackground = "Core\I\intro_day3.paa"; // eg. "img\yourpicture.jpg" no picture? use "";
+		pictureColor[] = {0.0,0.3,0.6,1}; // Overlay color
+	};
+	class Killed
+	{
+		title = "Entire Wolf team K.I.A.";
+		subtitle = "Operation Switch Off";
+		description = "Eagle Eye: Your failure will have dire consequences for the remainder of the campaign!";
+		pictureBackground = "Core\I\intro_day3.paa"; // eg. "img\yourpicture.jpg" no picture? use "";
+		pictureColor[] = {0.0,0.3,0.6,1}; // Overlay color
+	};	
+};
+
+/**********  Mission specific settings **********/
+showGPS = 1; // Allow GPS where (0=disallowed), (1=allowed)
+showCompass = 1; // Allow Compass (0=disallowed), (1=allowed)
+showWatch = 1; // Allow Watch (0=disallowed), (1=allowed)
+showMap = 1;  // Allow Map (0=disallowed), (1=allowed)
+disableChannels[]={1,2,3,4}; // Restrict chat channels where (0=Global),(1=Side),(2=Command),(3=Group),(4=Vehicle),(5=Direct),(6=System)
+
+
+/***********************************   DO NOT EDIT BELOW THIS LINE!   **********************************/
+
+
+disabledAI = 1; // Enable AI's to fill empty playable slots (0=disable), (1=enable)
+enableDebugConsole = 1;	// Enable the debug console where (0=disabled),(1=Admins Only),(2=Everyone) DO NOT SET AS 2!
+aiKills = 0;
+enableItemsDropping = 0;
+
+/**********  Mission Params **********/
+class Params
+{
+	 // paramsArray[0]
+	class acreSelected
+	{
+		title = "A.C.R.E - Advanced Combat Radio Environment";
+		values[] = {0,1};
+		texts[] = {"disabled","enabled"};
+		default = 1;
+	};
+	// paramsArray[1]
+	class ctabSelected {
+		title = "cTab - Commanders Tablet";
+		values[] = {0,1};
+		texts[] = {"disabled","enabled"};
+		default = 0;
+	};
+};

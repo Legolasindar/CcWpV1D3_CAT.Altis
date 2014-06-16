@@ -1,0 +1,18 @@
+L.A.M.B.S. Mission Framework
+LAF3 version: 1.02 / MAY 2014
+
+
+Required add-ons to play this mission:
+----------------------------------------------------------------------------
+ACRE			 	- http://www.armaholic.com/page.php?id=19324
+CBA A3 (Incl in ACRE)		- See ACRE
+JayArma3Lib (Incl in ACRE)	- See ACRE
+cTab 				- http://www.armaholic.com/page.php?id=22992
+F/A-18 Super Hornet 		- http://www.armaholic.com/page.php?id=22594
+
+Recommended Mods:
+----------------------------------------------------------------------------
+ST-Hud for ARMA 3 		- http://www.armaholic.com/page.php?id=18949
+MRB Voicestop 			- http://www.armaholic.com/page.php?id=18879
+
+
